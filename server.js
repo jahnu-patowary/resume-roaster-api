@@ -7,7 +7,7 @@ const OpenAI = require("openai");
 
 const app = express();
 app.use(cors());
-
+app.use(express.static(__dirname));
 const client = new OpenAI({
     apiKey: process.env.SAMBANOVA_API_KEY,
     baseURL: "https://api.sambanova.ai/v1"
